@@ -1,0 +1,130 @@
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 222.2 84% 4.9%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 222.2 84% 4.9%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 222.2 84% 4.9%;
+
+    --primary: 234 89% 74%;
+    --primary-foreground: a10 40% 98%;
+
+    --secondary: 255 92% 76%;
+    --secondary-foreground: 222.2 47.4% 11.2%;
+
+    --muted: 210 40% 96.1%;
+    --muted-foreground: 215.4 16.3% 46.9%;
+
+    --accent: 226 100% 94%;
+    --accent-foreground: 222.2 47.4% 11.2%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
+    --ring: 222.2 84% 4.9%;
+
+    --radius: 0.5rem;
+
+    --sidebar-background: 222 47% 11%;
+    --sidebar-foreground: 210 40% 98%;
+    --sidebar-primary: 217.2 91.2% 59.8%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 217.2 32.6% 17.5%;
+    --sidebar-accent-foreground: 210 40% 98%;
+    --sidebar-border: 217.2 32.6% 17.5%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
+}
+
+.markdown-body {
+  @apply text-sm text-foreground leading-normal;
+}
+
+.markdown-body h1 {
+  @apply text-3xl font-bold mt-6 mb-4;
+}
+
+.markdown-body h2 {
+  @apply text-2xl font-bold mt-5 mb-3;
+}
+
+.markdown-body h3 {
+  @apply text-xl font-bold mt-4 mb-2;
+}
+
+.markdown-body p {
+  @apply mb-4;
+}
+
+.markdown-body ul, .markdown-body ol {
+  @apply pl-6 mb-4;
+}
+
+.markdown-body ul {
+  @apply list-disc;
+}
+
+.markdown-body ol {
+  @apply list-decimal;
+}
+
+.markdown-body li {
+  @apply mb-1;
+}
+
+.markdown-body code {
+  @apply font-mono text-xs bg-muted px-1.5 py-0.5 rounded;
+}
+
+.markdown-body pre {
+  @apply font-mono text-xs bg-code text-code-foreground p-3 rounded-md overflow-x-auto mb-4;
+}
+
+.markdown-body pre code {
+  @apply bg-transparent p-0 text-code-foreground;
+}
+
+.markdown-body blockquote {
+  @apply pl-4 border-l-4 border-muted italic mb-4;
+}
+
+.markdown-body table {
+  @apply w-full border-collapse mb-4;
+}
+
+.markdown-body table th, .markdown-body table td {
+  @apply border border-border px-3 py-2;
+}
+
+.markdown-body hr {
+  @apply my-6 border-t border-border;
+}
+
+.markdown-body img {
+  @apply max-w-full h-auto;
+}
+
+.markdown-body a {
+  @apply text-readme-primary hover:underline;
+}
